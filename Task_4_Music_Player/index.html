@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4 - JavaScript Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="player">
+    <section class="now-playing">
+      <div class="cover" id="cover">♫</div>
+      <p class="label">NOW PLAYING</p>
+      <h1 id="title">SoundHelix Song 1</h1>
+      <p id="artist">Demo Artist</p>
+
+      <div class="time-row">
+        <span id="current">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+      <input id="progress" type="range" min="0" max="100" value="0" aria-label="Song progress">
+
+      <div class="controls">
+        <button id="prev" title="Previous">⏮</button>
+        <button id="play" class="play" title="Play/Pause">▶</button>
+        <button id="next" title="Next">⏭</button>
+      </div>
+
+      <div class="volume">
+        <span>🔊</span>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+      </div>
+
+      <label class="autoplay">
+        <input id="autoplay" type="checkbox">
+        Autoplay next song
+      </label>
+
+      <audio id="audio" preload="metadata"></audio>
+    </section>
+
+    <aside class="playlist">
+      <div class="playlist-head">
+        <h2>Playlist</h2>
+        <span id="count">3 songs</span>
+      </div>
+      <div id="playlist"></div>
+      <p class="note">
+        Demo audio uses public SoundHelix sample tracks. You can replace the URLs
+        in <strong>script.js</strong> with your own MP3 files.
+      </p>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
